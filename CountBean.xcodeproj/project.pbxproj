@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA10F27814D79322009DF28B /* greenBean.png in Resources */ = {isa = PBXBuildFile; fileRef = CA10F27714D79322009DF28B /* greenBean.png */; };
+		CA10F27C14D7D4CF009DF28B /* LevelPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA10F27A14D7D4CF009DF28B /* LevelPickerController.m */; };
+		CA10F27D14D7D4CF009DF28B /* LevelPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA10F27B14D7D4CF009DF28B /* LevelPickerController.xib */; };
+		CA8106EA14D7911000677B87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8106E914D7911000677B87 /* UIKit.framework */; };
+		CA8106EC14D7911000677B87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8106EB14D7911000677B87 /* Foundation.framework */; };
+		CA8106EE14D7911000677B87 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8106ED14D7911000677B87 /* CoreGraphics.framework */; };
+		CA8106F414D7911000677B87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA8106F214D7911000677B87 /* InfoPlist.strings */; };
+		CA8106F714D7911000677B87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8106F614D7911000677B87 /* main.m */; };
+		CA8106FA14D7911000677B87 /* CountBeanAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8106F914D7911000677B87 /* CountBeanAppDelegate.m */; };
+		CA8106FD14D7911000677B87 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8106FB14D7911000677B87 /* MainWindow.xib */; };
+		CA81070014D7911000677B87 /* CountBeanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8106FF14D7911000677B87 /* CountBeanViewController.m */; };
+		CA81070314D7911000677B87 /* CountBeanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA81070114D7911000677B87 /* CountBeanViewController.xib */; };
+		CA81070A14D7911000677B87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8106E914D7911000677B87 /* UIKit.framework */; };
+		CA81070B14D7911000677B87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8106EB14D7911000677B87 /* Foundation.framework */; };
+		CA81070C14D7911000677B87 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8106ED14D7911000677B87 /* CoreGraphics.framework */; };
+		CA81071414D7911000677B87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA81071214D7911000677B87 /* InfoPlist.strings */; };
+		CA81071714D7911000677B87 /* CountBeanTests.h in Resources */ = {isa = PBXBuildFile; fileRef = CA81071614D7911000677B87 /* CountBeanTests.h */; };
+		CA81071914D7911000677B87 /* CountBeanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81071814D7911000677B87 /* CountBeanTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA81070D14D7911000677B87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA8106DC14D7910F00677B87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA8106E414D7910F00677B87;
+			remoteInfo = CountBean;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA10F27714D79322009DF28B /* greenBean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenBean.png; sourceTree = "<group>"; };
+		CA10F27914D7D4CF009DF28B /* LevelPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelPickerController.h; sourceTree = "<group>"; };
+		CA10F27A14D7D4CF009DF28B /* LevelPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelPickerController.m; sourceTree = "<group>"; };
+		CA10F27B14D7D4CF009DF28B /* LevelPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelPickerController.xib; sourceTree = "<group>"; };
+		CA8106E514D7911000677B87 /* CountBean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountBean.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA8106E914D7911000677B87 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CA8106EB14D7911000677B87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CA8106ED14D7911000677B87 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CA8106F114D7911000677B87 /* CountBean-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CountBean-Info.plist"; sourceTree = "<group>"; };
+		CA8106F314D7911000677B87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CA8106F514D7911000677B87 /* CountBean-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountBean-Prefix.pch"; sourceTree = "<group>"; };
+		CA8106F614D7911000677B87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA8106F814D7911000677B87 /* CountBeanAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountBeanAppDelegate.h; sourceTree = "<group>"; };
+		CA8106F914D7911000677B87 /* CountBeanAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountBeanAppDelegate.m; sourceTree = "<group>"; };
+		CA8106FC14D7911000677B87 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		CA8106FE14D7911000677B87 /* CountBeanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountBeanViewController.h; sourceTree = "<group>"; };
+		CA8106FF14D7911000677B87 /* CountBeanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountBeanViewController.m; sourceTree = "<group>"; };
+		CA81070214D7911000677B87 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CountBeanViewController.xib; sourceTree = "<group>"; };
+		CA81070914D7911000677B87 /* CountBeanTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountBeanTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA81071114D7911000677B87 /* CountBeanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CountBeanTests-Info.plist"; sourceTree = "<group>"; };
+		CA81071314D7911000677B87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CA81071514D7911000677B87 /* CountBeanTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountBeanTests-Prefix.pch"; sourceTree = "<group>"; };
+		CA81071614D7911000677B87 /* CountBeanTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountBeanTests.h; sourceTree = "<group>"; };
+		CA81071814D7911000677B87 /* CountBeanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountBeanTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA8106E214D7910F00677B87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA8106EA14D7911000677B87 /* UIKit.framework in Frameworks */,
+				CA8106EC14D7911000677B87 /* Foundation.framework in Frameworks */,
+				CA8106EE14D7911000677B87 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA81070514D7911000677B87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA81070A14D7911000677B87 /* UIKit.framework in Frameworks */,
+				CA81070B14D7911000677B87 /* Foundation.framework in Frameworks */,
+				CA81070C14D7911000677B87 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA8106DA14D7910F00677B87 = {
+			isa = PBXGroup;
+			children = (
+				CA8106EF14D7911000677B87 /* CountBean */,
+				CA81070F14D7911000677B87 /* CountBeanTests */,
+				CA8106E814D7911000677B87 /* Frameworks */,
+				CA8106E614D7911000677B87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA8106E614D7911000677B87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA8106E514D7911000677B87 /* CountBean.app */,
+				CA81070914D7911000677B87 /* CountBeanTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA8106E814D7911000677B87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA8106E914D7911000677B87 /* UIKit.framework */,
+				CA8106EB14D7911000677B87 /* Foundation.framework */,
+				CA8106ED14D7911000677B87 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA8106EF14D7911000677B87 /* CountBean */ = {
+			isa = PBXGroup;
+			children = (
+				CA81072414D7928E00677B87 /* Resource */,
+				CA8106F814D7911000677B87 /* CountBeanAppDelegate.h */,
+				CA8106F914D7911000677B87 /* CountBeanAppDelegate.m */,
+				CA8106FB14D7911000677B87 /* MainWindow.xib */,
+				CA8106FE14D7911000677B87 /* CountBeanViewController.h */,
+				CA8106FF14D7911000677B87 /* CountBeanViewController.m */,
+				CA81070114D7911000677B87 /* CountBeanViewController.xib */,
+				CA8106F014D7911000677B87 /* Supporting Files */,
+				CA10F27914D7D4CF009DF28B /* LevelPickerController.h */,
+				CA10F27A14D7D4CF009DF28B /* LevelPickerController.m */,
+				CA10F27B14D7D4CF009DF28B /* LevelPickerController.xib */,
+			);
+			path = CountBean;
+			sourceTree = "<group>";
+		};
+		CA8106F014D7911000677B87 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA8106F114D7911000677B87 /* CountBean-Info.plist */,
+				CA8106F214D7911000677B87 /* InfoPlist.strings */,
+				CA8106F514D7911000677B87 /* CountBean-Prefix.pch */,
+				CA8106F614D7911000677B87 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA81070F14D7911000677B87 /* CountBeanTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA81071614D7911000677B87 /* CountBeanTests.h */,
+				CA81071814D7911000677B87 /* CountBeanTests.m */,
+				CA81071014D7911000677B87 /* Supporting Files */,
+			);
+			path = CountBeanTests;
+			sourceTree = "<group>";
+		};
+		CA81071014D7911000677B87 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA81071114D7911000677B87 /* CountBeanTests-Info.plist */,
+				CA81071214D7911000677B87 /* InfoPlist.strings */,
+				CA81071514D7911000677B87 /* CountBeanTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA81072414D7928E00677B87 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CA10F27714D79322009DF28B /* greenBean.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA8106E414D7910F00677B87 /* CountBean */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA81071C14D7911000677B87 /* Build configuration list for PBXNativeTarget "CountBean" */;
+			buildPhases = (
+				CA8106E114D7910F00677B87 /* Sources */,
+				CA8106E214D7910F00677B87 /* Frameworks */,
+				CA8106E314D7910F00677B87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountBean;
+			productName = CountBean;
+			productReference = CA8106E514D7911000677B87 /* CountBean.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA81070814D7911000677B87 /* CountBeanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA81071F14D7911000677B87 /* Build configuration list for PBXNativeTarget "CountBeanTests" */;
+			buildPhases = (
+				CA81070414D7911000677B87 /* Sources */,
+				CA81070514D7911000677B87 /* Frameworks */,
+				CA81070614D7911000677B87 /* Resources */,
+				CA81070714D7911000677B87 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA81070E14D7911000677B87 /* PBXTargetDependency */,
+			);
+			name = CountBeanTests;
+			productName = CountBeanTests;
+			productReference = CA81070914D7911000677B87 /* CountBeanTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA8106DC14D7910F00677B87 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = CA8106DF14D7910F00677B87 /* Build configuration list for PBXProject "CountBean" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CA8106DA14D7910F00677B87;
+			productRefGroup = CA8106E614D7911000677B87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA8106E414D7910F00677B87 /* CountBean */,
+				CA81070814D7911000677B87 /* CountBeanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA8106E314D7910F00677B87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA8106F414D7911000677B87 /* InfoPlist.strings in Resources */,
+				CA8106FD14D7911000677B87 /* MainWindow.xib in Resources */,
+				CA81070314D7911000677B87 /* CountBeanViewController.xib in Resources */,
+				CA10F27814D79322009DF28B /* greenBean.png in Resources */,
+				CA10F27D14D7D4CF009DF28B /* LevelPickerController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA81070614D7911000677B87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA81071414D7911000677B87 /* InfoPlist.strings in Resources */,
+				CA81071714D7911000677B87 /* CountBeanTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA81070714D7911000677B87 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA8106E114D7910F00677B87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA8106F714D7911000677B87 /* main.m in Sources */,
+				CA8106FA14D7911000677B87 /* CountBeanAppDelegate.m in Sources */,
+				CA81070014D7911000677B87 /* CountBeanViewController.m in Sources */,
+				CA10F27C14D7D4CF009DF28B /* LevelPickerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA81070414D7911000677B87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA81071914D7911000677B87 /* CountBeanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA81070E14D7911000677B87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA8106E414D7910F00677B87 /* CountBean */;
+			targetProxy = CA81070D14D7911000677B87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA8106F214D7911000677B87 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA8106F314D7911000677B87 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CA8106FB14D7911000677B87 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA8106FC14D7911000677B87 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		CA81070114D7911000677B87 /* CountBeanViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA81070214D7911000677B87 /* en */,
+			);
+			name = CountBeanViewController.xib;
+			sourceTree = "<group>";
+		};
+		CA81071214D7911000677B87 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA81071314D7911000677B87 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA81071A14D7911000677B87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CA81071B14D7911000677B87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		CA81071D14D7911000677B87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CountBean/CountBean-Prefix.pch";
+				INFOPLIST_FILE = "CountBean/CountBean-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CA81071E14D7911000677B87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CountBean/CountBean-Prefix.pch";
+				INFOPLIST_FILE = "CountBean/CountBean-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CA81072014D7911000677B87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CountBean.app/CountBean";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CountBeanTests/CountBeanTests-Prefix.pch";
+				INFOPLIST_FILE = "CountBeanTests/CountBeanTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CA81072114D7911000677B87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CountBean.app/CountBean";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CountBeanTests/CountBeanTests-Prefix.pch";
+				INFOPLIST_FILE = "CountBeanTests/CountBeanTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA8106DF14D7910F00677B87 /* Build configuration list for PBXProject "CountBean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA81071A14D7911000677B87 /* Debug */,
+				CA81071B14D7911000677B87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA81071C14D7911000677B87 /* Build configuration list for PBXNativeTarget "CountBean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA81071D14D7911000677B87 /* Debug */,
+				CA81071E14D7911000677B87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA81071F14D7911000677B87 /* Build configuration list for PBXNativeTarget "CountBeanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA81072014D7911000677B87 /* Debug */,
+				CA81072114D7911000677B87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA8106DC14D7910F00677B87 /* Project object */;
+}
