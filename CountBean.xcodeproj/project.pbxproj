@@ -25,6 +25,13 @@
 		CA81071414D7911000677B87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA81071214D7911000677B87 /* InfoPlist.strings */; };
 		CA81071714D7911000677B87 /* CountBeanTests.h in Resources */ = {isa = PBXBuildFile; fileRef = CA81071614D7911000677B87 /* CountBeanTests.h */; };
 		CA81071914D7911000677B87 /* CountBeanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81071814D7911000677B87 /* CountBeanTests.m */; };
+		CACDAB1A14D8FD0E00120373 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACDAB1814D8FD0E00120373 /* SettingController.m */; };
+		CACDAB1B14D8FD0E00120373 /* SettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACDAB1914D8FD0E00120373 /* SettingController.xib */; };
+		CACDAB1F14D8FD5B00120373 /* MainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACDAB1D14D8FD5B00120373 /* MainMenuController.m */; };
+		CACDAB2014D8FD5B00120373 /* MainMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACDAB1E14D8FD5B00120373 /* MainMenuController.xib */; };
+		CACDAB2614D8FEED00120373 /* CBController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACDAB2414D8FEED00120373 /* CBController.m */; };
+		CACDAB2714D8FEED00120373 /* CBController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACDAB2514D8FEED00120373 /* CBController.xib */; };
+		CACDAB2A14D9127500120373 /* Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = CACDAB2914D9127400120373 /* Configure.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,17 @@
 		CA81071514D7911000677B87 /* CountBeanTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountBeanTests-Prefix.pch"; sourceTree = "<group>"; };
 		CA81071614D7911000677B87 /* CountBeanTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountBeanTests.h; sourceTree = "<group>"; };
 		CA81071814D7911000677B87 /* CountBeanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountBeanTests.m; sourceTree = "<group>"; };
+		CACDAB1714D8FD0D00120373 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
+		CACDAB1814D8FD0E00120373 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
+		CACDAB1914D8FD0E00120373 /* SettingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingController.xib; sourceTree = "<group>"; };
+		CACDAB1C14D8FD5B00120373 /* MainMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuController.h; sourceTree = "<group>"; };
+		CACDAB1D14D8FD5B00120373 /* MainMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuController.m; sourceTree = "<group>"; };
+		CACDAB1E14D8FD5B00120373 /* MainMenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuController.xib; sourceTree = "<group>"; };
+		CACDAB2314D8FEED00120373 /* CBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBController.h; sourceTree = "<group>"; };
+		CACDAB2414D8FEED00120373 /* CBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBController.m; sourceTree = "<group>"; };
+		CACDAB2514D8FEED00120373 /* CBController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBController.xib; sourceTree = "<group>"; };
+		CACDAB2814D9127400120373 /* Configure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configure.h; sourceTree = "<group>"; };
+		CACDAB2914D9127400120373 /* Configure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configure.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,17 +138,14 @@
 		CA8106EF14D7911000677B87 /* CountBean */ = {
 			isa = PBXGroup;
 			children = (
+				CACDAB2214D8FEBB00120373 /* controller */,
 				CA81072414D7928E00677B87 /* Resource */,
 				CA8106F814D7911000677B87 /* CountBeanAppDelegate.h */,
 				CA8106F914D7911000677B87 /* CountBeanAppDelegate.m */,
 				CA8106FB14D7911000677B87 /* MainWindow.xib */,
-				CA8106FE14D7911000677B87 /* CountBeanViewController.h */,
-				CA8106FF14D7911000677B87 /* CountBeanViewController.m */,
-				CA81070114D7911000677B87 /* CountBeanViewController.xib */,
 				CA8106F014D7911000677B87 /* Supporting Files */,
-				CA10F27914D7D4CF009DF28B /* LevelPickerController.h */,
-				CA10F27A14D7D4CF009DF28B /* LevelPickerController.m */,
-				CA10F27B14D7D4CF009DF28B /* LevelPickerController.xib */,
+				CACDAB2814D9127400120373 /* Configure.h */,
+				CACDAB2914D9127400120373 /* Configure.m */,
 			);
 			path = CountBean;
 			sourceTree = "<group>";
@@ -172,6 +187,28 @@
 				CA10F27714D79322009DF28B /* greenBean.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		CACDAB2214D8FEBB00120373 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA8106FE14D7911000677B87 /* CountBeanViewController.h */,
+				CA8106FF14D7911000677B87 /* CountBeanViewController.m */,
+				CA81070114D7911000677B87 /* CountBeanViewController.xib */,
+				CA10F27914D7D4CF009DF28B /* LevelPickerController.h */,
+				CA10F27A14D7D4CF009DF28B /* LevelPickerController.m */,
+				CA10F27B14D7D4CF009DF28B /* LevelPickerController.xib */,
+				CACDAB1714D8FD0D00120373 /* SettingController.h */,
+				CACDAB1814D8FD0E00120373 /* SettingController.m */,
+				CACDAB1914D8FD0E00120373 /* SettingController.xib */,
+				CACDAB1C14D8FD5B00120373 /* MainMenuController.h */,
+				CACDAB1D14D8FD5B00120373 /* MainMenuController.m */,
+				CACDAB1E14D8FD5B00120373 /* MainMenuController.xib */,
+				CACDAB2314D8FEED00120373 /* CBController.h */,
+				CACDAB2414D8FEED00120373 /* CBController.m */,
+				CACDAB2514D8FEED00120373 /* CBController.xib */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +283,9 @@
 				CA81070314D7911000677B87 /* CountBeanViewController.xib in Resources */,
 				CA10F27814D79322009DF28B /* greenBean.png in Resources */,
 				CA10F27D14D7D4CF009DF28B /* LevelPickerController.xib in Resources */,
+				CACDAB1B14D8FD0E00120373 /* SettingController.xib in Resources */,
+				CACDAB2014D8FD5B00120373 /* MainMenuController.xib in Resources */,
+				CACDAB2714D8FEED00120373 /* CBController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +325,10 @@
 				CA8106FA14D7911000677B87 /* CountBeanAppDelegate.m in Sources */,
 				CA81070014D7911000677B87 /* CountBeanViewController.m in Sources */,
 				CA10F27C14D7D4CF009DF28B /* LevelPickerController.m in Sources */,
+				CACDAB1A14D8FD0E00120373 /* SettingController.m in Sources */,
+				CACDAB1F14D8FD5B00120373 /* MainMenuController.m in Sources */,
+				CACDAB2614D8FEED00120373 /* CBController.m in Sources */,
+				CACDAB2A14D9127500120373 /* Configure.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,13 @@
 
 @class CountBeanViewController;
 @class LevelPickerController;
+@class MainMenuController;
 @interface CountBeanAppDelegate : NSObject <UIApplicationDelegate> {
 
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet LevelPickerController *viewController;
+@property (nonatomic, retain) IBOutlet MainMenuController *viewController;
 
 @end

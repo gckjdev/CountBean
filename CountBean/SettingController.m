@@ -1,14 +1,16 @@
 //
-//  LevelPickerController.m
+//  SettingController.m
 //  CountBean
 //
-//  Created by  on 12-1-31.
+//  Created by  on 12-2-1.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "LevelPickerController.h"
-#import "CountBeanViewController.h"
-@implementation LevelPickerController
+#import "SettingController.h"
+#import "Configure.h"
+@implementation SettingController
+@synthesize showTime;
+@synthesize countTime;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,11 +34,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
     [self setPanGestureRecognizerEnable:YES];
+    [self setTapGestureRecognizerEnable:YES];
+    NSInteger showTimeValue = [Configure getShowTime];
+    NSInteger countTimeValue = [Configure getCountTime];
+    [showTime setText:[NSString stringWithFormat:@"%d",showTimeValue]];
+    [countTime setText:[NSString stringWithFormat:@"%d",countTimeValue]];
+
 }
 
 - (void)viewDidUnload
 {
+    [self setShowTime:nil];
+    [self setCountTime:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -48,26 +59,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)pickLevel:(id)sender {
-    NSInteger tag = ((UIButton *)sender).tag;
-    NSRange range;
-    switch (tag) {
-        case MediumLevel:
-            range = NSMakeRange(10, 9);
-            break;
-        case HighLevel:
-            range = NSMakeRange(20, 9);
-            break;
-        case SuperLevel:
-            range = NSMakeRange(30, 19);
-            break;
-        case LowLevel:
-        default:
-            range = NSMakeRange(5, 5);
-            break;
-    }
-    CountBeanViewController *countBeans = [[CountBeanViewController alloc] initWithRange:range];
-    [self.navigationController pushViewController:countBeans animated:YES];
-    [countBeans release];
+- (void)dealloc {
+    [showTime release];
+    [countTime release];
+    [super dealloc];
 }
+
+- (void)performTapGesture:(UITapGestureRecognizer *)tap
+{
+    [showTime resignFirstResponder];
+    [countTime resignFirstResponder];
+    [Configure setCountTime:[countTime.text integerValue]];
+    [Configure setShowTime:[showTime.text integerValue]];
+}
+
+
 @end

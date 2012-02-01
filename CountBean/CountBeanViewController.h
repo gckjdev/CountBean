@@ -20,6 +20,12 @@ enum {
     ShowTips
 };
 
+enum  {
+    Fail = 0,
+    Successful = 1,
+    Timeout = 2
+};
+
 @interface CountBeanViewController : UIViewController<UITextFieldDelegate,UIAlertViewDelegate,UIGestureRecognizerDelegate> {
     NSMutableSet *_beanSet;
     NSTimer *_timer;
@@ -34,7 +40,7 @@ enum {
 @property (retain, nonatomic) IBOutlet UILabel *clockLabel;
 
 - (void)startGame;
-- (void)endGame:(BOOL)successful;
+- (void)endGame:(NSInteger)endType;
 - (void)stopTimer;
 - (IBAction)clickStartButton:(id)sender;
 - (id)initWithRange:(NSRange)range;

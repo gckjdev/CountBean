@@ -7,8 +7,8 @@
 //
 
 #import "CountBeanViewController.h"
-#define SHOW_TIME 4
-#define COUNT_TIME 30
+#include "Configure.h"
+
 
 
 @implementation CountBeanViewController
@@ -104,13 +104,26 @@
 }
 
 
+- (void)commitResult
+{
+    [self.resultTextField resignFirstResponder];
+    if (self.resultTextField.text && self.resultTextField.text.length != 0) {
+        NSInteger count = [self.resultTextField.text integerValue];
+        [self endGame:(count == _count)];    
+    }
+}
+
+
 - (void)performTapMainView:(UITapGestureRecognizer *)tap
 {
     if (tap.view == self.view) {
         [self startGame];
+    }else if(tap.view == self.maskView && !self.maskView.hidden){
+        [self commitResult];
     }else{
         [self.resultTextField resignFirstResponder];
     }
+        
 }
 
 - (void)performPanMainView:(UIPanGestureRecognizer *)pan
@@ -152,6 +165,8 @@
     UITapGestureRecognizer *tapMaskViewRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(performTapMainView:)];
     [self.maskView addGestureRecognizer:tapMaskViewRecognizer];
     [tapMaskViewRecognizer release];
+    
+    [self startGame];
 }
 
 
@@ -196,7 +211,7 @@
 {
     _countTime --;
     if (_countTime == 0) {
-        [self endGame:NO];
+        [self endGame:Timeout];
     }
     [self setClockLabelWithSeconds:_countTime];
 }
@@ -223,7 +238,8 @@
 
 - (void)startCounter
 {
-    [self startClockTimer:COUNT_TIME];
+    NSInteger countTime = [Configure getCountTime];
+    [self startClockTimer:countTime];
 }
 
 
@@ -253,6 +269,7 @@
     [self.maskView setHidden:NO];
     [self.clockLabel setHidden:NO];
     [self.resultTextField setHidden:NO];
+    [self.resultTextField setText:nil];
 }
 
 - (void)endShowBeans:(NSTimer*)theTimer
@@ -272,15 +289,16 @@
     _count = [self countForBean];
     [self addBeans:GreenBean withCount:_count];
     [self showBeans];
-    [self startMemoryTimer:SHOW_TIME];
+    NSInteger showTime = [Configure getShowTime];
+    [self startMemoryTimer:showTime];
 
 }
 
 - (IBAction)clickStartButton:(id)sender {
     [self startGame];
 }
-
-- (void)endGame:(BOOL)successful
+- (void)endGame:(NSInteger)endType
+//- (void)endGame:(BOOL)successful
 {
     [self stopTimer];
     if (_status == ShowTips) {
@@ -291,13 +309,17 @@
     UIAlertView *endAlert = nil;
     NSString *title, *msg, *buttonTitle;
     
-    if (successful) {
+    if (endType == Successful) {
         title = @"过关";
         msg = @"恭喜你过关了，继续接受下一关的挑战？";
         buttonTitle = @"下一关";
+    }else if(endType == Timeout){
+        title = @"时间到";
+        msg = [NSString stringWithFormat:@"正确个数:%d\n要提高时间啦，重玩一局？",_count];
+        buttonTitle = @"重玩";
     }else{
         title = @"失败";
-        msg = [NSString stringWithFormat:@"正确个数:%d,失败乃成功之母，重玩一局？",_count];
+        msg = [NSString stringWithFormat:@"正确个数:%d\n失败乃成功之母，重玩一局？",_count];
         buttonTitle = @"重玩";
     }
     endAlert= [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"查看" otherButtonTitles:buttonTitle, nil];
@@ -315,16 +337,12 @@
         [self startGame];
     }
 }
+
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    NSInteger count = [textField.text integerValue];
-    [self endGame:(count == _count)];    
-    [textField resignFirstResponder];
+    [self commitResult];
     return YES;
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch

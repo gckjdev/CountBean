@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CBController.h"
 enum {
     LowLevel = 1000,
     MediumLevel,
@@ -14,7 +15,7 @@ enum {
     SuperLevel
 };
 
-@interface LevelPickerController : UIViewController
+@interface LevelPickerController : CBController
 - (IBAction)pickLevel:(id)sender;
 
 @end
