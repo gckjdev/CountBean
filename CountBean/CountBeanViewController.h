@@ -35,7 +35,7 @@ enum {
 
 - (void)startGame;
 - (void)endGame:(BOOL)successful;
-
+- (void)stopTimer;
 - (IBAction)clickStartButton:(id)sender;
 - (id)initWithRange:(NSRange)range;
 

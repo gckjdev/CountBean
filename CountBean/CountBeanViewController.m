@@ -123,10 +123,17 @@
     }
 }
 
+
+
 #pragma mark - View lifecycle
 
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self stopTimer];
+    [super viewWillDisappear:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -189,8 +196,6 @@
 {
     _countTime --;
     if (_countTime == 0) {
-        [_timer invalidate];
-        _timer = nil;
         [self endGame:NO];
     }
     [self setClockLabelWithSeconds:_countTime];
@@ -199,7 +204,9 @@
 - (void)stopTimer
 {
     if (_timer) {
-        [_timer invalidate];
+        if ([_timer isValid]) {
+            [_timer invalidate];
+        }
         _timer = nil;
     }
 }
@@ -275,12 +282,11 @@
 
 - (void)endGame:(BOOL)successful
 {
- 
+    [self stopTimer];
     if (_status == ShowTips) {
         return;
     }
     _status = ShowTips;
-    [self stopTimer];
     [self.resultTextField resignFirstResponder];
     UIAlertView *endAlert = nil;
     NSString *title, *msg, *buttonTitle;
