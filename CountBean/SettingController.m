@@ -34,7 +34,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     [self setPanGestureRecognizerEnable:YES];
     [self setTapGestureRecognizerEnable:YES];
     NSInteger showTimeValue = [Configure getShowTime];
@@ -49,8 +48,6 @@
     [self setShowTime:nil];
     [self setCountTime:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
