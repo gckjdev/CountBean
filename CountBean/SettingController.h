@@ -14,4 +14,5 @@
 }
 @property (retain, nonatomic) IBOutlet UITextField *showTime;
 @property (retain, nonatomic) IBOutlet UITextField *countTime;
+- (IBAction)clickBack:(id)sender;
 @end

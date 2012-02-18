@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setPanGestureRecognizerEnable:YES];
+ //   [self setPanGestureRecognizerEnable:YES];
 }
 
 - (void)viewDidUnload
@@ -69,5 +69,9 @@
     CountBeanViewController *countBeans = [[CountBeanViewController alloc] initWithRange:range];
     [self.navigationController pushViewController:countBeans animated:YES];
     [countBeans release];
+}
+
+- (IBAction)clickBackButton:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

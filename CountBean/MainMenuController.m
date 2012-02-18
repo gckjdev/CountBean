@@ -11,6 +11,9 @@
 #import "LevelPickerController.h"
 
 @implementation MainMenuController
+@synthesize helpButton;
+@synthesize startButton;
+@synthesize settingButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,11 +37,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.startButton setTitle:NSLocalizedString(@"开始", nil) forState:UIControlStateNormal];
+    [self.settingButton setTitle:NSLocalizedString(@"设置", nil) forState:UIControlStateNormal];
+    [self.helpButton setTitle:NSLocalizedString(@"帮助", nil) forState:UIControlStateNormal];    
 }
 
 - (void)viewDidUnload
 {
+    [self setHelpButton:nil];
+    [self setStartButton:nil];
+    [self setSettingButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -60,5 +68,13 @@
     SettingController *setting = [[SettingController alloc] init];
     [self.navigationController pushViewController:setting animated:YES];
     [setting release];
+}
+- (void)dealloc {
+    [helpButton release];
+    [startButton release];
+    [settingButton release];
+    [super dealloc];
+}
+- (IBAction)clickHelpButton:(id)sender {
 }
 @end

@@ -59,7 +59,7 @@
 - (void)setTapGestureRecognizerEnable:(BOOL)enable
 {
     _tapGestureRecognizerEnable = enable;
-    _tapGesture.enabled = enable;
+//    _tapGesture.enabled = enable;
 
 }
 #pragma mark - View lifecycle
@@ -91,7 +91,18 @@
     }
     return NO;
 }
-
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if ([self isTapGestureRecognizerEnable]) {
+        _tapGesture.enabled = YES;
+    }
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{   
+    if ([self isTapGestureRecognizerEnable]) {
+        _tapGesture.enabled = NO;
+    }
+}
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     return YES;

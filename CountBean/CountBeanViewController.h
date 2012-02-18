@@ -36,13 +36,15 @@ enum  {
 }
 @property (retain, nonatomic) IBOutlet UIButton *startButton;
 @property (retain, nonatomic) IBOutlet UITextField *resultTextField;
-@property (retain, nonatomic) IBOutlet UIView *maskView;
+@property (retain, nonatomic) IBOutlet UIImageView *maskView;
 @property (retain, nonatomic) IBOutlet UILabel *clockLabel;
+- (IBAction)clickBackButton:(id)sender;
+- (IBAction)clickReplayButton:(id)sender;
 
 - (void)startGame;
 - (void)endGame:(NSInteger)endType;
 - (void)stopTimer;
-- (IBAction)clickStartButton:(id)sender;
+//- (IBAction)clickStartButton:(id)sender;
 - (id)initWithRange:(NSRange)range;
 
 @end

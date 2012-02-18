@@ -63,8 +63,8 @@
 - (CGPoint)randBeanCenter
 {
     while (YES) {
-        NSInteger x = (rand() % (320 - 40)) + 20;
-        NSInteger y = (rand() % (480 - 60)) + 30;
+        NSInteger x = (rand() % (320 - 60)) + 20;
+        NSInteger y = rand() % 300 + 60;
         CGPoint retPoint = CGPointMake(x, y);
         BOOL endLoop = YES;
         for (UIImageView *beanView in _beanSet) {
@@ -117,7 +117,7 @@
 - (void)performTapMainView:(UITapGestureRecognizer *)tap
 {
     if (tap.view == self.view) {
-        [self startGame];
+//        [self startGame];
     }else if(tap.view == self.maskView && !self.maskView.hidden){
         [self commitResult];
     }else{
@@ -126,15 +126,15 @@
         
 }
 
-- (void)performPanMainView:(UIPanGestureRecognizer *)pan
-{
-    if (pan.state == UIGestureRecognizerStateEnded) {
-        CGPoint translation = [pan translationInView:self.view];
-        if (translation.x < 0) {
-            [self.navigationController popViewControllerAnimated:YES];
-        }
-    }
-}
+//- (void)performPanMainView:(UIPanGestureRecognizer *)pan
+//{
+//    if (pan.state == UIGestureRecognizerStateEnded) {
+//        CGPoint translation = [pan translationInView:self.view];
+//        if (translation.x < 0) {
+//            [self.navigationController popViewControllerAnimated:YES];
+//        }
+//    }
+//}
 
 
 
@@ -152,14 +152,14 @@
     [super viewDidLoad];
     srand(time(0));
     _beanSet = [[NSMutableSet alloc] init];
-    UITapGestureRecognizer *tapMainViewRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(performTapMainView:)];
-    [self.view addGestureRecognizer:tapMainViewRecognizer];
-    [tapMainViewRecognizer release];
+//    UITapGestureRecognizer *tapMainViewRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(performTapMainView:)];
+//    [self.view addGestureRecognizer:tapMainViewRecognizer];
+//    [tapMainViewRecognizer release];
 
     
-    UIPanGestureRecognizer *panMainViewRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(performPanMainView:)];
-    [self.view addGestureRecognizer:panMainViewRecognizer];
-    [panMainViewRecognizer release];
+//    UIPanGestureRecognizer *panMainViewRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(performPanMainView:)];
+//    [self.view addGestureRecognizer:panMainViewRecognizer];
+//    [panMainViewRecognizer release];
 
     
     UITapGestureRecognizer *tapMaskViewRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(performTapMainView:)];
@@ -284,6 +284,14 @@
     _timer = [NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(endShowBeans:) userInfo:nil repeats:NO];
 }
 
+- (IBAction)clickBackButton:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)clickReplayButton:(id)sender {
+    [self startGame];
+}
+
 - (void)startGame
 {
     _count = [self countForBean];
@@ -294,9 +302,9 @@
 
 }
 
-- (IBAction)clickStartButton:(id)sender {
-    [self startGame];
-}
+//- (IBAction)clickStartButton:(id)sender {
+//    [self startGame];
+//}
 - (void)endGame:(NSInteger)endType
 //- (void)endGame:(BOOL)successful
 {
@@ -308,21 +316,21 @@
     [self.resultTextField resignFirstResponder];
     UIAlertView *endAlert = nil;
     NSString *title, *msg, *buttonTitle;
-    
+        buttonTitle = @"下一局";    
     if (endType == Successful) {
         title = @"过关";
-        msg = @"恭喜你过关了，继续接受下一关的挑战？";
-        buttonTitle = @"下一关";
+        msg = @"恭喜你过关了，继续接受下一局的挑战？";
+
     }else if(endType == Timeout){
         title = @"时间到";
-        msg = [NSString stringWithFormat:@"正确个数:%d\n要提高时间啦，重玩一局？",_count];
-        buttonTitle = @"重玩";
+        msg = [NSString stringWithFormat:@"正确个数:%d\n要提高时间啦，继续下一局？",_count];
+//        buttonTitle = @"重玩";
     }else{
         title = @"失败";
-        msg = [NSString stringWithFormat:@"正确个数:%d\n失败乃成功之母，重玩一局？",_count];
-        buttonTitle = @"重玩";
+        msg = [NSString stringWithFormat:@"正确个数:%d\n失败乃成功之母，继续一局？",_count];
+//        buttonTitle = @"重玩";
     }
-    endAlert= [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"查看" otherButtonTitles:buttonTitle, nil];
+    endAlert= [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"返回" otherButtonTitles:@"查看", buttonTitle, nil];
     [endAlert show];
     [endAlert release];
     
@@ -331,9 +339,11 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {
-        [self showBeans];
+        [self clickBackButton:nil];
     }else if(buttonIndex == 1)
     {
+        [self showBeans];
+    }else{
         [self startGame];
     }
 }

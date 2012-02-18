@@ -17,5 +17,6 @@ enum {
 
 @interface LevelPickerController : CBController
 - (IBAction)pickLevel:(id)sender;
+- (IBAction)clickBackButton:(id)sender;
 
 @end

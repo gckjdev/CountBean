@@ -34,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setPanGestureRecognizerEnable:YES];
+//    [self setPanGestureRecognizerEnable:YES];
     [self setTapGestureRecognizerEnable:YES];
     NSInteger showTimeValue = [Configure getShowTime];
     NSInteger countTimeValue = [Configure getCountTime];
@@ -71,4 +71,7 @@
 }
 
 
+- (IBAction)clickBack:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
