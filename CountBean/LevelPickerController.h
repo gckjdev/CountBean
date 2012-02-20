@@ -16,7 +16,12 @@ enum {
 };
 
 @interface LevelPickerController : CBController
+@property (retain, nonatomic) IBOutlet UILabel *levelTitle;
+@property (retain, nonatomic) IBOutlet UIButton *mediuLevel;
+@property (retain, nonatomic) IBOutlet UIButton *lowLevel;
+@property (retain, nonatomic) IBOutlet UIButton *highLevel;
+@property (retain, nonatomic) IBOutlet UIButton *superLevel;
 - (IBAction)pickLevel:(id)sender;
 - (IBAction)clickBackButton:(id)sender;
-
++ (NSString *)levelStringForLevel:(NSInteger)level;
 @end

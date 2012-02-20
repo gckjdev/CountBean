@@ -37,9 +37,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.startButton setTitle:NSLocalizedString(@"开始", nil) forState:UIControlStateNormal];
-    [self.settingButton setTitle:NSLocalizedString(@"设置", nil) forState:UIControlStateNormal];
-    [self.helpButton setTitle:NSLocalizedString(@"帮助", nil) forState:UIControlStateNormal];    
+    [self.startButton setTitle:NSLocalizedString(@"Start", nil) forState:UIControlStateNormal];
+    [self.settingButton setTitle:NSLocalizedString(@"Settings", nil) forState:UIControlStateNormal];
+    [self.helpButton setTitle:NSLocalizedString(@"Help", nil) forState:UIControlStateNormal];    
 }
 
 - (void)viewDidUnload

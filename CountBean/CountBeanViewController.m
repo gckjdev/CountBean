@@ -7,20 +7,24 @@
 //
 
 #import "CountBeanViewController.h"
-#include "Configure.h"
-
+#import "LevelPickerController.h"
+#import "Configure.h"
+#import "CBResource.h"
 
 
 @implementation CountBeanViewController
+@synthesize titleBar = _titleBar;
+@synthesize retainTime = _retainTime;
 @synthesize resultTextField = _resultTextField;
 @synthesize maskView = _maskView;
 @synthesize clockLabel = _clockLabel;
 @synthesize startButton = _startButton;
 
-- (id)initWithRange:(NSRange)range
+- (id)initWithLevel:(NSInteger)level Range:(NSRange)range;
 {
     self = [super init];
     if (self) {
+        _level = level;
         _countRange = range;
     }
     return self;
@@ -33,6 +37,8 @@
     [_maskView release];
     [_clockLabel release];
     [_resultTextField release];
+    [_retainTime release];
+    [_titleBar release];
     [super dealloc];
 }
 
@@ -126,18 +132,16 @@
         
 }
 
-//- (void)performPanMainView:(UIPanGestureRecognizer *)pan
-//{
-//    if (pan.state == UIGestureRecognizerStateEnded) {
-//        CGPoint translation = [pan translationInView:self.view];
-//        if (translation.x < 0) {
-//            [self.navigationController popViewControllerAnimated:YES];
-//        }
-//    }
-//}
 
-
-
+- (void)setTitleBar
+{
+    NSString *levelString = [LevelPickerController levelStringForLevel:_level];
+    NSString *countString = [NSString  stringWithFormat:@"%d ~ %d",_countRange.location, _countRange.location + _countRange.length];
+    NSString *titleFormat = NSLocalizedString(@"Level: %@ Number: %@", nil);
+    NSString *title = [NSString stringWithFormat:titleFormat,levelString,countString];
+    [self.titleBar setTitle:title forState:UIControlStateNormal];
+    [self.titleBar setUserInteractionEnabled:NO];
+}
 #pragma mark - View lifecycle
 
 
@@ -150,22 +154,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setTitleBar];
     srand(time(0));
     _beanSet = [[NSMutableSet alloc] init];
-//    UITapGestureRecognizer *tapMainViewRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(performTapMainView:)];
-//    [self.view addGestureRecognizer:tapMainViewRecognizer];
-//    [tapMainViewRecognizer release];
-
-    
-//    UIPanGestureRecognizer *panMainViewRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(performPanMainView:)];
-//    [self.view addGestureRecognizer:panMainViewRecognizer];
-//    [panMainViewRecognizer release];
-
     
     UITapGestureRecognizer *tapMaskViewRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(performTapMainView:)];
     [self.maskView addGestureRecognizer:tapMaskViewRecognizer];
     [tapMaskViewRecognizer release];
-    
+    [self.resultTextField setPlaceholder:NSLocalizedString(@"Please input the number of beans", nil)];
     [self startGame];
 }
 
@@ -176,9 +172,9 @@
     [self setMaskView:nil];
     [self setClockLabel:nil];
     [self setResultTextField:nil];
+    [self setRetainTime:nil];
+    [self setTitleBar:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -274,14 +270,29 @@
 
 - (void)endShowBeans:(NSTimer*)theTimer
 {
+    [self stopTimer];
     [self hideBeans];
     [self startCounter];
 }
 
+- (void)setShowTime:(NSInteger)showTime
+{
+    _showTime = showTime;
+    [self.retainTime setText:[NSString stringWithFormat:@"%d",_showTime]];
+}
+
+- (void)showTimeClock:(NSTimer *)theTimer
+{
+    [self setShowTime: --_showTime];
+    if (_showTime == 0) {
+        [self endShowBeans:theTimer];
+    }
+}
 - (void) startMemoryTimer:(CFTimeInterval)interval
 {
     [self stopTimer];
-    _timer = [NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(endShowBeans:) userInfo:nil repeats:NO];
+    [self setShowTime:interval];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showTimeClock:) userInfo:nil repeats:YES];
 }
 
 - (IBAction)clickBackButton:(id)sender {
@@ -290,6 +301,13 @@
 
 - (IBAction)clickReplayButton:(id)sender {
     [self startGame];
+}
+
+- (void)rePlay
+{
+    [self showBeans];
+    NSInteger showTime = [Configure getShowTime];
+    [self startMemoryTimer:showTime];
 }
 
 - (void)startGame
@@ -302,11 +320,7 @@
 
 }
 
-//- (IBAction)clickStartButton:(id)sender {
-//    [self startGame];
-//}
 - (void)endGame:(NSInteger)endType
-//- (void)endGame:(BOOL)successful
 {
     [self stopTimer];
     if (_status == ShowTips) {
@@ -314,40 +328,56 @@
     }
     _status = ShowTips;
     [self.resultTextField resignFirstResponder];
-    UIAlertView *endAlert = nil;
-    NSString *title, *msg, *buttonTitle;
-        buttonTitle = @"下一局";    
-    if (endType == Successful) {
-        title = @"过关";
-        msg = @"恭喜你过关了，继续接受下一局的挑战？";
 
+    CBAlertView *endAlert = nil;
+    NSString *title, *msg;
+    NSArray *array = nil;
+    
+//    "Pass" = "过关";
+//    
+//    "An Other Challenge?" = "恭喜过关！继续接受下一局的挑战？";
+//    
+//    "Time Out" = "超时";
+//    
+//    "Improve Your Speed. Replay?" = "要加快速度啦！重玩？";
+//    
+//    "Failure" = "失败";
+//    
+//    "You Are Wrong. Replay?" = "很遗憾，数错了！重玩？";
+
+    
+    if (endType == Successful) {
+        title = NSLocalizedString(@"Pass", nil);
+        msg = NSLocalizedString(@"An Other Challenge?", nil);
+        array = [NSArray arrayWithObjects:BACK_IMAGE, REPLAY_IMAGE, NEXT_IMAGE, nil];
     }else if(endType == Timeout){
-        title = @"时间到";
-        msg = [NSString stringWithFormat:@"正确个数:%d\n要提高时间啦，继续下一局？",_count];
-//        buttonTitle = @"重玩";
+        title = NSLocalizedString(@"Timeout", nil);
+        msg = NSLocalizedString(@"Improve Your Speed. Replay?", nil);
+        array = [NSArray arrayWithObjects:BACK_IMAGE, REPLAY_IMAGE, nil];
     }else{
-        title = @"失败";
-        msg = [NSString stringWithFormat:@"正确个数:%d\n失败乃成功之母，继续一局？",_count];
-//        buttonTitle = @"重玩";
+        title = NSLocalizedString(@"Failure", nil);
+        msg = NSLocalizedString(@"You Are Wrong. Replay?", nil);
+        array = [NSArray arrayWithObjects:BACK_IMAGE, REPLAY_IMAGE, nil];
     }
-    endAlert= [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"返回" otherButtonTitles:@"查看", buttonTitle, nil];
-    [endAlert show];
+    endAlert = [[CBAlertView alloc] initWithTitle:title message:msg delegate:self images:array];
+    [endAlert showWithSuperView:self.view];
     [endAlert release];
+
     
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)alertView:(CBAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {
         [self clickBackButton:nil];
     }else if(buttonIndex == 1)
     {
-        [self showBeans];
+        [self rePlay];
     }else{
         [self startGame];
     }
-}
 
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {

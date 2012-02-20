@@ -19,4 +19,5 @@
 
 @property (nonatomic, retain) IBOutlet MainMenuController *viewController;
 
+- (UIViewController *)currentViewController;
 @end

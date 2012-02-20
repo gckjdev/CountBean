@@ -68,6 +68,11 @@
      */
 }
 
+- (UIViewController *)currentViewController
+{
+    return [[self.viewController navigationController] visibleViewController];
+}
+
 - (void)dealloc
 {
     [_window release];

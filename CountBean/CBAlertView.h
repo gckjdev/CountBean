@@ -11,15 +11,18 @@
 @class CBAlertView;
 @protocol CBAlertViewDelegate <NSObject>
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+- (void)alertView:(CBAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 
 @end
 
 #define BG_IMAGE [UIImage imageNamed:@"paper2.png"]
 
-@interface CBAlertView : UIImageView
+@interface CBAlertView : UIView
 {
+    
+    UIImageView *_backgroundView;
     NSString *_title, *_message;
+    BOOL _isShow;
 }
 
 @property(nonatomic, retain)NSString *title;
@@ -27,12 +30,11 @@
 @property(nonatomic, assign)id<CBAlertViewDelegate>delegate;
 @property(nonatomic, retain)NSString *cancelButtonTitle;
 @property(nonatomic, retain)NSArray *otherButtonTitles;
+@property(nonatomic, retain)NSArray *images;
+@property(nonatomic, readonly)BOOL isShow;
+@property(nonatomic, retain)UIImageView *backgroundView;
+- (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate images:(NSArray *)images;
 
-- (id)initWithTitle:(NSString *)title 
-            message:(NSString *)message 
-           delegate:(id)delegate 
-  cancelButtonTitle:(NSString *)cancelButtonTitle 
-  otherButtonTitles:(NSArray *)otherButtonTitles;
+- (void)showWithSuperView:(UIView *)superView;
 
-- (void)show;
 @end
