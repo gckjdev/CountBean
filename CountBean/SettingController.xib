@@ -63,7 +63,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">paper2@2x.png</string>
+							<string key="NSResourceName">paper2.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="958649714">
@@ -563,7 +563,7 @@
 			<string key="background2.png">{16, 16}</string>
 			<string key="click.png">{16, 16}</string>
 			<string key="click_pressed.png">{16, 16}</string>
-			<string key="paper2@2x.png">{608, 395}</string>
+			<string key="paper2.png">{16, 16}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
