@@ -9,6 +9,7 @@
 #import "MainMenuController.h"
 #import "SettingController.h"
 #import "LevelPickerController.h"
+#import "HelpController.h"
 
 @implementation MainMenuController
 @synthesize helpButton;
@@ -76,5 +77,8 @@
     [super dealloc];
 }
 - (IBAction)clickHelpButton:(id)sender {
+    HelpController *hc = [[HelpController alloc] init];
+    [self.navigationController pushViewController:hc animated:YES];
+    [hc release];
 }
 @end

@@ -44,6 +44,9 @@
 		CACDAB2614D8FEED00120373 /* CBController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACDAB2414D8FEED00120373 /* CBController.m */; };
 		CACDAB2714D8FEED00120373 /* CBController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACDAB2514D8FEED00120373 /* CBController.xib */; };
 		CACDAB2A14D9127500120373 /* Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = CACDAB2914D9127400120373 /* Configure.m */; };
+		CAD1306714F341EC009FAAEF /* HelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD1306514F341EC009FAAEF /* HelpController.m */; };
+		CAD1306814F341ED009FAAEF /* HelpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD1306614F341EC009FAAEF /* HelpController.xib */; };
+		CAD1306A14F34416009FAAEF /* paper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD1306914F34416009FAAEF /* paper@2x.png */; };
 		CAE062BB14F1FB880005C567 /* next_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE062B914F1FB880005C567 /* next_pressed@2x.png */; };
 		CAE062BC14F1FB880005C567 /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE062BA14F1FB880005C567 /* next@2x.png */; };
 		CAE062D814F247560005C567 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE062DA14F247560005C567 /* Localizable.strings */; };
@@ -118,6 +121,10 @@
 		CACDAB2514D8FEED00120373 /* CBController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBController.xib; sourceTree = "<group>"; };
 		CACDAB2814D9127400120373 /* Configure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configure.h; sourceTree = "<group>"; };
 		CACDAB2914D9127400120373 /* Configure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configure.m; sourceTree = "<group>"; };
+		CAD1306414F341EC009FAAEF /* HelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpController.h; sourceTree = "<group>"; };
+		CAD1306514F341EC009FAAEF /* HelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpController.m; sourceTree = "<group>"; };
+		CAD1306614F341EC009FAAEF /* HelpController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpController.xib; sourceTree = "<group>"; };
+		CAD1306914F34416009FAAEF /* paper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper@2x.png"; sourceTree = "<group>"; };
 		CAE062B814F1F0090005C567 /* CBResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBResource.h; sourceTree = "<group>"; };
 		CAE062B914F1FB880005C567 /* next_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next_pressed@2x.png"; sourceTree = "<group>"; };
 		CAE062BA14F1FB880005C567 /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
@@ -241,6 +248,7 @@
 		CA81072414D7928E00677B87 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CAD1306914F34416009FAAEF /* paper@2x.png */,
 				CAE062DC14F2571A0005C567 /* click_pressed@2x.png */,
 				CAE062DD14F2571A0005C567 /* click@2x.png */,
 				CAE062B914F1FB880005C567 /* next_pressed@2x.png */,
@@ -289,6 +297,9 @@
 				CACDAB2314D8FEED00120373 /* CBController.h */,
 				CACDAB2414D8FEED00120373 /* CBController.m */,
 				CACDAB2514D8FEED00120373 /* CBController.xib */,
+				CAD1306414F341EC009FAAEF /* HelpController.h */,
+				CAD1306514F341EC009FAAEF /* HelpController.m */,
+				CAD1306614F341EC009FAAEF /* HelpController.xib */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -394,6 +405,8 @@
 				CAE062D814F247560005C567 /* Localizable.strings in Resources */,
 				CAE062DE14F2571A0005C567 /* click_pressed@2x.png in Resources */,
 				CAE062DF14F2571A0005C567 /* click@2x.png in Resources */,
+				CAD1306814F341ED009FAAEF /* HelpController.xib in Resources */,
+				CAD1306A14F34416009FAAEF /* paper@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +451,7 @@
 				CACDAB2614D8FEED00120373 /* CBController.m in Sources */,
 				CACDAB2A14D9127500120373 /* Configure.m in Sources */,
 				CAED1E1114EF4B1D00867EE0 /* CBAlertView.m in Sources */,
+				CAD1306714F341EC009FAAEF /* HelpController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

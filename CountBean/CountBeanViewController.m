@@ -18,7 +18,6 @@
 @synthesize resultTextField = _resultTextField;
 @synthesize maskView = _maskView;
 @synthesize clockLabel = _clockLabel;
-@synthesize startButton = _startButton;
 
 - (id)initWithLevel:(NSInteger)level Range:(NSRange)range;
 {
@@ -33,7 +32,6 @@
 - (void)dealloc
 {
     [_beanSet release];
-    [_startButton release];
     [_maskView release];
     [_clockLabel release];
     [_resultTextField release];
@@ -151,6 +149,11 @@
     [super viewWillDisappear:animated];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -168,7 +171,6 @@
 
 - (void)viewDidUnload
 {
-    [self setStartButton:nil];
     [self setMaskView:nil];
     [self setClockLabel:nil];
     [self setResultTextField:nil];
@@ -250,22 +252,23 @@
 - (void)showBeans
 {
     _status = ShowBeans;
-    [self.startButton setHidden:YES];
     [self.maskView setHidden:YES];
     [self.clockLabel setHidden:YES];
     [self.resultTextField setHidden:YES];
     [self setBeanSetHidden:NO];
+    [self.resultTextField resignFirstResponder];
 }
 
 - (void)hideBeans
 {
     _status = HideBeans;
     [self setBeanSetHidden:YES];
-    [self.startButton setHidden:NO];
     [self.maskView setHidden:NO];
     [self.clockLabel setHidden:NO];
     [self.resultTextField setHidden:NO];
     [self.resultTextField setText:nil];
+    [self.resultTextField becomeFirstResponder];
+
 }
 
 - (void)endShowBeans:(NSTimer*)theTimer

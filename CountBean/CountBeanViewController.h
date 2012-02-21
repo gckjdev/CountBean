@@ -36,7 +36,6 @@ enum  {
     NSInteger _showTime;
     NSInteger _level;
 }
-@property (retain, nonatomic) IBOutlet UIButton *startButton;
 @property (retain, nonatomic) IBOutlet UITextField *resultTextField;
 @property (retain, nonatomic) IBOutlet UIImageView *maskView;
 @property (retain, nonatomic) IBOutlet UILabel *clockLabel;
