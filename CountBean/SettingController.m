@@ -89,15 +89,14 @@
     
     NSInteger showT = [showTime.text integerValue];
     NSInteger countT = [countTime.text integerValue];
-    if (showT <= 0) {
+    if (showT < MIN_SHOW_TIME || showT > MAX_SHOW_TIME) {
         [self setShowTimeWithInteger:[Configure getShowTime]];
     }
-    if (countT <= 0) {
+    if (countT < MIN_COUNT_TIME || countT > MAX_COUNT_TIME) {
         [self setCountTimeWithInteger:[Configure getCountTime]];
     }
 
 }
-
 
 - (IBAction)clickBack:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];

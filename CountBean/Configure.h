@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #define DEFAULT_COUNT_TIME 30
 #define DEFAULT_SHOW_TIME 5
+
+#define MIN_COUNT_TIME 1
+#define MIN_SHOW_TIME 1
+#define MAX_COUNT_TIME 60
+#define MAX_SHOW_TIME 15
+
+
 #define KEY_SHOW_TIME @"SHOW_TIME"
 #define KEY_COUNT_TIME @"COUNT_TIME"
 

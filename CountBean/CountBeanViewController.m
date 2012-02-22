@@ -8,6 +8,8 @@
 
 #import "CountBeanViewController.h"
 #import "LevelPickerController.h"
+#import "TopScoreManager.h"
+#import "TopScore.h"
 #import "Configure.h"
 #import "CBResource.h"
 
@@ -322,6 +324,16 @@
 
 }
 
+- (void)saveTopScore
+{
+    NSInteger time = [Configure getCountTime]+[Configure getShowTime] - _countTime;
+    TopScore *topScore = [[TopScore alloc] initWithScore:_count showTime:time];
+    [[TopScoreManager defaultManager] addTopScore:topScore];
+    [topScore release];
+}
+
+
+
 - (void)endGame:(NSInteger)endType
 {
     [self stopTimer];
@@ -335,23 +347,11 @@
     NSString *title, *msg;
     NSArray *array = nil;
     
-//    "Pass" = "过关";
-//    
-//    "An Other Challenge?" = "恭喜过关！继续接受下一局的挑战？";
-//    
-//    "Time Out" = "超时";
-//    
-//    "Improve Your Speed. Replay?" = "要加快速度啦！重玩？";
-//    
-//    "Failure" = "失败";
-//    
-//    "You Are Wrong. Replay?" = "很遗憾，数错了！重玩？";
-
-    
     if (endType == Successful) {
         title = NSLocalizedString(@"Pass", nil);
         msg = NSLocalizedString(@"An Other Challenge?", nil);
         array = [NSArray arrayWithObjects:BACK_IMAGE, REPLAY_IMAGE, NEXT_IMAGE, nil];
+        [self saveTopScore];
     }else if(endType == Timeout){
         title = NSLocalizedString(@"Timeout", nil);
         msg = NSLocalizedString(@"Improve Your Speed. Replay?", nil);

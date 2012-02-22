@@ -46,6 +46,12 @@
 		CACDAB2A14D9127500120373 /* Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = CACDAB2914D9127400120373 /* Configure.m */; };
 		CACF17F914F4958D00AC048F /* settingDefault_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACF17F714F4958D00AC048F /* settingDefault_pressed@2x.png */; };
 		CACF17FA14F4958D00AC048F /* settingDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACF17F814F4958D00AC048F /* settingDefault@2x.png */; };
+		CACF180114F498B800AC048F /* TopController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF17FF14F498B700AC048F /* TopController.m */; };
+		CACF180214F498B800AC048F /* TopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACF180014F498B800AC048F /* TopController.xib */; };
+		CACF180714F49DCB00AC048F /* TopScore.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF180614F49DCB00AC048F /* TopScore.m */; };
+		CACF180B14F49DF700AC048F /* TopScoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF180A14F49DF700AC048F /* TopScoreManager.m */; };
+		CACF181514F4CF5300AC048F /* TopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF181314F4CF5100AC048F /* TopCell.m */; };
+		CACF181614F4CF5300AC048F /* TopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACF181414F4CF5200AC048F /* TopCell.xib */; };
 		CAD1306714F341EC009FAAEF /* HelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD1306514F341EC009FAAEF /* HelpController.m */; };
 		CAD1306814F341ED009FAAEF /* HelpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD1306614F341EC009FAAEF /* HelpController.xib */; };
 		CAD1306A14F34416009FAAEF /* paper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD1306914F34416009FAAEF /* paper@2x.png */; };
@@ -125,6 +131,16 @@
 		CACDAB2914D9127400120373 /* Configure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configure.m; sourceTree = "<group>"; };
 		CACF17F714F4958D00AC048F /* settingDefault_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingDefault_pressed@2x.png"; sourceTree = "<group>"; };
 		CACF17F814F4958D00AC048F /* settingDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingDefault@2x.png"; sourceTree = "<group>"; };
+		CACF17FE14F498B700AC048F /* TopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopController.h; sourceTree = "<group>"; };
+		CACF17FF14F498B700AC048F /* TopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopController.m; sourceTree = "<group>"; };
+		CACF180014F498B800AC048F /* TopController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopController.xib; sourceTree = "<group>"; };
+		CACF180514F49DCB00AC048F /* TopScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopScore.h; sourceTree = "<group>"; };
+		CACF180614F49DCB00AC048F /* TopScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopScore.m; sourceTree = "<group>"; };
+		CACF180914F49DF700AC048F /* TopScoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopScoreManager.h; sourceTree = "<group>"; };
+		CACF180A14F49DF700AC048F /* TopScoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopScoreManager.m; sourceTree = "<group>"; };
+		CACF181214F4CF5000AC048F /* TopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCell.h; sourceTree = "<group>"; };
+		CACF181314F4CF5100AC048F /* TopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCell.m; sourceTree = "<group>"; };
+		CACF181414F4CF5200AC048F /* TopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopCell.xib; sourceTree = "<group>"; };
 		CAD1306414F341EC009FAAEF /* HelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpController.h; sourceTree = "<group>"; };
 		CAD1306514F341EC009FAAEF /* HelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpController.m; sourceTree = "<group>"; };
 		CAD1306614F341EC009FAAEF /* HelpController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpController.xib; sourceTree = "<group>"; };
@@ -203,6 +219,9 @@
 		CA8106EF14D7911000677B87 /* CountBean */ = {
 			isa = PBXGroup;
 			children = (
+				CACF180814F49DE400AC048F /* Manager */,
+				CACF180414F49DAB00AC048F /* Model */,
+				CACF180314F49D9A00AC048F /* View */,
 				CACDAB2214D8FEBB00120373 /* controller */,
 				CA81072414D7928E00677B87 /* Resource */,
 				CA8106F814D7911000677B87 /* CountBeanAppDelegate.h */,
@@ -211,8 +230,6 @@
 				CA8106F014D7911000677B87 /* Supporting Files */,
 				CACDAB2814D9127400120373 /* Configure.h */,
 				CACDAB2914D9127400120373 /* Configure.m */,
-				CAED1E0F14EF4B1B00867EE0 /* CBAlertView.h */,
-				CAED1E1014EF4B1C00867EE0 /* CBAlertView.m */,
 			);
 			path = CountBean;
 			sourceTree = "<group>";
@@ -306,8 +323,41 @@
 				CAD1306414F341EC009FAAEF /* HelpController.h */,
 				CAD1306514F341EC009FAAEF /* HelpController.m */,
 				CAD1306614F341EC009FAAEF /* HelpController.xib */,
+				CACF17FE14F498B700AC048F /* TopController.h */,
+				CACF17FF14F498B700AC048F /* TopController.m */,
+				CACF180014F498B800AC048F /* TopController.xib */,
+				CACF181214F4CF5000AC048F /* TopCell.h */,
+				CACF181314F4CF5100AC048F /* TopCell.m */,
+				CACF181414F4CF5200AC048F /* TopCell.xib */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		CACF180314F49D9A00AC048F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAED1E0F14EF4B1B00867EE0 /* CBAlertView.h */,
+				CAED1E1014EF4B1C00867EE0 /* CBAlertView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CACF180414F49DAB00AC048F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CACF180514F49DCB00AC048F /* TopScore.h */,
+				CACF180614F49DCB00AC048F /* TopScore.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CACF180814F49DE400AC048F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CACF180914F49DF700AC048F /* TopScoreManager.h */,
+				CACF180A14F49DF700AC048F /* TopScoreManager.m */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +465,8 @@
 				CAD1306A14F34416009FAAEF /* paper@2x.png in Resources */,
 				CACF17F914F4958D00AC048F /* settingDefault_pressed@2x.png in Resources */,
 				CACF17FA14F4958D00AC048F /* settingDefault@2x.png in Resources */,
+				CACF180214F498B800AC048F /* TopController.xib in Resources */,
+				CACF181614F4CF5300AC048F /* TopCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +512,10 @@
 				CACDAB2A14D9127500120373 /* Configure.m in Sources */,
 				CAED1E1114EF4B1D00867EE0 /* CBAlertView.m in Sources */,
 				CAD1306714F341EC009FAAEF /* HelpController.m in Sources */,
+				CACF180114F498B800AC048F /* TopController.m in Sources */,
+				CACF180714F49DCB00AC048F /* TopScore.m in Sources */,
+				CACF180B14F49DF700AC048F /* TopScoreManager.m in Sources */,
+				CACF181514F4CF5300AC048F /* TopCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

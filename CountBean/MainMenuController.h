@@ -13,9 +13,11 @@
 - (IBAction)clickPlayButton:(id)sender;
 - (IBAction)clickSetting:(id)sender;
 - (IBAction)clickHelpButton:(id)sender;
+- (IBAction)clickTop:(id)sender;
 
 @property (retain, nonatomic) IBOutlet UIButton *helpButton;
 @property (retain, nonatomic) IBOutlet UIButton *startButton;
 @property (retain, nonatomic) IBOutlet UIButton *settingButton;
+@property (retain, nonatomic) IBOutlet UIButton *topButton;
 
 @end

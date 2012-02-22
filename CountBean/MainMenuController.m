@@ -10,11 +10,13 @@
 #import "SettingController.h"
 #import "LevelPickerController.h"
 #import "HelpController.h"
+#import "TopController.h"
 
 @implementation MainMenuController
 @synthesize helpButton;
 @synthesize startButton;
 @synthesize settingButton;
+@synthesize topButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +43,8 @@
     [self.startButton setTitle:NSLocalizedString(@"Start", nil) forState:UIControlStateNormal];
     [self.settingButton setTitle:NSLocalizedString(@"Settings", nil) forState:UIControlStateNormal];
     [self.helpButton setTitle:NSLocalizedString(@"Help", nil) forState:UIControlStateNormal];    
+    [self.topButton setTitle:NSLocalizedString(@"Top", nil) forState:UIControlStateNormal];    
+
 }
 
 - (void)viewDidUnload
@@ -48,6 +52,7 @@
     [self setHelpButton:nil];
     [self setStartButton:nil];
     [self setSettingButton:nil];
+    [self setTopButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -74,11 +79,18 @@
     [helpButton release];
     [startButton release];
     [settingButton release];
+    [topButton release];
     [super dealloc];
 }
 - (IBAction)clickHelpButton:(id)sender {
     HelpController *hc = [[HelpController alloc] init];
     [self.navigationController pushViewController:hc animated:YES];
     [hc release];
+}
+
+- (IBAction)clickTop:(id)sender {
+    TopController *tc = [[TopController alloc] init];
+    [self.navigationController pushViewController:tc animated:YES];
+    [tc release];
 }
 @end
