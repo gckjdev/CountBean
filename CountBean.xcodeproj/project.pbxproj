@@ -52,6 +52,8 @@
 		CACF180B14F49DF700AC048F /* TopScoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF180A14F49DF700AC048F /* TopScoreManager.m */; };
 		CACF181514F4CF5300AC048F /* TopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF181314F4CF5100AC048F /* TopCell.m */; };
 		CACF181614F4CF5300AC048F /* TopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACF181414F4CF5200AC048F /* TopCell.xib */; };
+		CACF182214F4EED200AC048F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACF182414F4EED200AC048F /* Default@2x.png */; };
+		CACF182514F4EEDA00AC048F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CACF182714F4EEDA00AC048F /* Default.png */; };
 		CAD1306714F341EC009FAAEF /* HelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD1306514F341EC009FAAEF /* HelpController.m */; };
 		CAD1306814F341ED009FAAEF /* HelpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD1306614F341EC009FAAEF /* HelpController.xib */; };
 		CAD1306A14F34416009FAAEF /* paper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD1306914F34416009FAAEF /* paper@2x.png */; };
@@ -141,6 +143,8 @@
 		CACF181214F4CF5000AC048F /* TopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopCell.h; sourceTree = "<group>"; };
 		CACF181314F4CF5100AC048F /* TopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopCell.m; sourceTree = "<group>"; };
 		CACF181414F4CF5200AC048F /* TopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopCell.xib; sourceTree = "<group>"; };
+		CACF182314F4EED200AC048F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/Default@2x.png"; sourceTree = "<group>"; };
+		CACF182614F4EEDA00AC048F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/Default.png; sourceTree = "<group>"; };
 		CAD1306414F341EC009FAAEF /* HelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpController.h; sourceTree = "<group>"; };
 		CAD1306514F341EC009FAAEF /* HelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpController.m; sourceTree = "<group>"; };
 		CAD1306614F341EC009FAAEF /* HelpController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpController.xib; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 		CA81072414D7928E00677B87 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CACF182714F4EEDA00AC048F /* Default.png */,
+				CACF182414F4EED200AC048F /* Default@2x.png */,
 				CACF17F714F4958D00AC048F /* settingDefault_pressed@2x.png */,
 				CACF17F814F4958D00AC048F /* settingDefault@2x.png */,
 				CAD1306914F34416009FAAEF /* paper@2x.png */,
@@ -467,6 +473,8 @@
 				CACF17FA14F4958D00AC048F /* settingDefault@2x.png in Resources */,
 				CACF180214F498B800AC048F /* TopController.xib in Resources */,
 				CACF181614F4CF5300AC048F /* TopCell.xib in Resources */,
+				CACF182214F4EED200AC048F /* Default@2x.png in Resources */,
+				CACF182514F4EEDA00AC048F /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +578,22 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		CACF182414F4EED200AC048F /* Default@2x.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CACF182314F4EED200AC048F /* en */,
+			);
+			name = "Default@2x.png";
+			sourceTree = "<group>";
+		};
+		CACF182714F4EEDA00AC048F /* Default.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CACF182614F4EEDA00AC048F /* en */,
+			);
+			name = Default.png;
+			sourceTree = "<group>";
+		};
 		CAE062DA14F247560005C567 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -594,7 +618,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -608,7 +632,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};

@@ -14,6 +14,9 @@
 @implementation TopController
 @synthesize topTable;
 @synthesize topTitle;
+@synthesize rankTitle;
+@synthesize countTitle;
+@synthesize timeTitle;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,16 +58,16 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 44.0;
-}
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    TopHeaderView *topHeader = [[TopHeaderView alloc] init];
-    topHeader.backgroundColor = [UIColor clearColor];
-    return [topHeader autorelease];
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//    return 44.0;
+//}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    TopHeaderView *topHeader = [[TopHeaderView alloc] init];
+//    topHeader.backgroundColor = [UIColor clearColor];
+//    return [topHeader autorelease];
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -77,6 +80,10 @@
 {
     [super viewDidLoad];
     [self.topTitle setText:NSLocalizedString(@"Top", nil)];
+    [rankTitle setText:NSLocalizedString(@"Rank", nil)];
+    [countTitle setText:NSLocalizedString(@"Count", nil)];               
+    [timeTitle setText:NSLocalizedString(@"Time", nil)];
+
 
 }
 
@@ -84,6 +91,9 @@
 {
     [self setTopTitle:nil];
     [self setTopTable:nil];
+    [self setRankTitle:nil];
+    [self setCountTitle:nil];
+    [self setTimeTitle:nil];
     [super viewDidUnload];
 }
 
@@ -100,6 +110,9 @@
     [topTitle release];
     [topTable release];
     [_scoreArray release];
+    [rankTitle release];
+    [countTitle release];
+    [timeTitle release];
     [super dealloc];
 }
 

@@ -10,7 +10,7 @@
 
 @interface TopScore : NSObject<NSCoding>
 {
-    
+    NSInteger _score, _showTime;
 }
 
 @property(nonatomic, assign)NSInteger score;

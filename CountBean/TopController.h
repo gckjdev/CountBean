@@ -15,6 +15,9 @@
     NSArray *_scoreArray;
 }
 @property (retain, nonatomic) IBOutlet UILabel *topTitle;
+@property (retain, nonatomic) IBOutlet UILabel *rankTitle;
+@property (retain, nonatomic) IBOutlet UILabel *countTitle;
+@property (retain, nonatomic) IBOutlet UILabel *timeTitle;
 - (IBAction)clickBack:(id)sender;
 @property (retain, nonatomic) IBOutlet UITableView *topTable;
 @end
