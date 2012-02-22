@@ -121,7 +121,6 @@
 - (void)performTapMainView:(UITapGestureRecognizer *)tap
 {
     if (tap.view == self.view) {
-//        [self startGame];
     }else if(tap.view == self.maskView && !self.maskView.hidden){
         [self commitResult];
     }else{

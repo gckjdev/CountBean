@@ -19,4 +19,5 @@
 @property (retain, nonatomic) IBOutlet UILabel *countLabel;
 - (IBAction)clickBack:(id)sender;
 - (IBAction)clickComfirm:(id)sender;
+- (IBAction)clickDefaultSettings:(id)sender;
 @end

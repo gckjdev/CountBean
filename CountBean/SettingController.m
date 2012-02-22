@@ -110,4 +110,11 @@
     [Configure setCountTime:countT];
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)clickDefaultSettings:(id)sender {
+    [self setCountTimeWithInteger:DEFAULT_COUNT_TIME];
+    [self setShowTimeWithInteger:DEFAULT_SHOW_TIME];
+    [Configure setShowTime:DEFAULT_SHOW_TIME];
+    [Configure setCountTime:DEFAULT_COUNT_TIME];
+}
 @end
