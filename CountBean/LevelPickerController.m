@@ -37,11 +37,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.levelTitle setText:NSLocalizedString(@"Level Selection", nil)];
-    [self.lowLevel setTitle:NSLocalizedString(@"Low", nil) forState:UIControlStateNormal];
-    [self.mediuLevel setTitle:NSLocalizedString(@"Mediu", nil) forState:UIControlStateNormal];
-    [self.highLevel setTitle:NSLocalizedString(@"High", nil) forState:UIControlStateNormal];
-    [self.superLevel setTitle:NSLocalizedString(@"Super", nil) forState:UIControlStateNormal];
+    [self.levelTitle setText:NSLocalizedString(@"Level", nil)];
+    [self.lowLevel setTitle:NSLocalizedString(@"Entry", nil) forState:UIControlStateNormal];
+    [self.mediuLevel setTitle:NSLocalizedString(@"Easy", nil) forState:UIControlStateNormal];
+    [self.highLevel setTitle:NSLocalizedString(@"Normal", nil) forState:UIControlStateNormal];
+    [self.superLevel setTitle:NSLocalizedString(@"Hard", nil) forState:UIControlStateNormal];
 }
 
 - (void)viewDidUnload
@@ -66,13 +66,13 @@
 {
     switch (level) {
         case MediumLevel:
-            return  NSLocalizedString(@"Mediu", nil);
+            return  NSLocalizedString(@"Easy", nil);
         case HighLevel:
-            return  NSLocalizedString(@"High", nil);
+            return  NSLocalizedString(@"Normal", nil);
         case SuperLevel:
-            return  NSLocalizedString(@"Super", nil);
+            return  NSLocalizedString(@"Hard", nil);
         case LowLevel:
-            return  NSLocalizedString(@"Low", nil);
+            return  NSLocalizedString(@"Entry", nil);
         default:
             return  nil;
     }

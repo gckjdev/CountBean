@@ -58,7 +58,6 @@ TopScoreManager *GlobalGetTopScoreManager()
     if (data) {
         self.topScoreList = [NSMutableArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:data]];
     }else{
-       // [self createTestData];
         [self.topScoreList removeAllObjects];
     }
 }
