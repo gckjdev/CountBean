@@ -10,6 +10,7 @@
 		CA10F27814D79322009DF28B /* greenBean@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA10F27714D79322009DF28B /* greenBean@2x.png */; };
 		CA10F27C14D7D4CF009DF28B /* LevelPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA10F27A14D7D4CF009DF28B /* LevelPickerController.m */; };
 		CA10F27D14D7D4CF009DF28B /* LevelPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA10F27B14D7D4CF009DF28B /* LevelPickerController.xib */; };
+		CA1C3CF314F5DB660022A8CD /* CountBean-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1C3CF214F5DB660022A8CD /* CountBean-Info.plist */; };
 		CA37F72E14ED05C400867820 /* back_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA37F72414ED05C300867820 /* back_pressed@2x.png */; };
 		CA37F72F14ED05C400867820 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA37F72514ED05C300867820 /* back@2x.png */; };
 		CA37F73014ED05C400867820 /* background1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA37F72614ED05C300867820 /* background1@2x.png */; };
@@ -56,7 +57,6 @@
 		CACF182514F4EEDA00AC048F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CACF182714F4EEDA00AC048F /* Default.png */; };
 		CACF182B14F4F40800AC048F /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = CACF182914F4F40800AC048F /* 57.png */; };
 		CACF182C14F4F40800AC048F /* 57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACF182A14F4F40800AC048F /* 57@2x.png */; };
-		CACF183114F4F9B600AC048F /* CountBean-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CACF183014F4F9B600AC048F /* CountBean-Info.plist */; };
 		CAD1306714F341EC009FAAEF /* HelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD1306514F341EC009FAAEF /* HelpController.m */; };
 		CAD1306814F341ED009FAAEF /* HelpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD1306614F341EC009FAAEF /* HelpController.xib */; };
 		CAD1306A14F34416009FAAEF /* paper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD1306914F34416009FAAEF /* paper@2x.png */; };
@@ -90,6 +90,10 @@
 		CA10F27914D7D4CF009DF28B /* LevelPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelPickerController.h; sourceTree = "<group>"; };
 		CA10F27A14D7D4CF009DF28B /* LevelPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelPickerController.m; sourceTree = "<group>"; };
 		CA10F27B14D7D4CF009DF28B /* LevelPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelPickerController.xib; sourceTree = "<group>"; };
+		CA1C3CF114F5DB450022A8CD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CA1C3CF214F5DB660022A8CD /* CountBean-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CountBean-Info.plist"; sourceTree = "<group>"; };
+		CA1C3CFC14F609650022A8CD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "zh-Hans.lproj/Default.png"; sourceTree = "<group>"; };
+		CA1C3CFD14F6096B0022A8CD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "zh-Hans.lproj/Default@2x.png"; sourceTree = "<group>"; };
 		CA37F71C14ED017E00867820 /* Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Localize.h; sourceTree = "<group>"; };
 		CA37F72414ED05C300867820 /* back_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_pressed@2x.png"; sourceTree = "<group>"; };
 		CA37F72514ED05C300867820 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
@@ -149,7 +153,6 @@
 		CACF182614F4EEDA00AC048F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/Default.png; sourceTree = "<group>"; };
 		CACF182914F4F40800AC048F /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
 		CACF182A14F4F40800AC048F /* 57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "57@2x.png"; sourceTree = "<group>"; };
-		CACF183014F4F9B600AC048F /* CountBean-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CountBean-Info.plist"; sourceTree = "<group>"; };
 		CAD1306414F341EC009FAAEF /* HelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpController.h; sourceTree = "<group>"; };
 		CAD1306514F341EC009FAAEF /* HelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpController.m; sourceTree = "<group>"; };
 		CAD1306614F341EC009FAAEF /* HelpController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpController.xib; sourceTree = "<group>"; };
@@ -246,7 +249,7 @@
 		CA8106F014D7911000677B87 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CACF183014F4F9B600AC048F /* CountBean-Info.plist */,
+				CA1C3CF214F5DB660022A8CD /* CountBean-Info.plist */,
 				CAE062DA14F247560005C567 /* Localizable.strings */,
 				CA8106F214D7911000677B87 /* InfoPlist.strings */,
 				CA8106F514D7911000677B87 /* CountBean-Prefix.pch */,
@@ -484,7 +487,7 @@
 				CACF182514F4EEDA00AC048F /* Default.png in Resources */,
 				CACF182B14F4F40800AC048F /* 57.png in Resources */,
 				CACF182C14F4F40800AC048F /* 57@2x.png in Resources */,
-				CACF183114F4F9B600AC048F /* CountBean-Info.plist in Resources */,
+				CA1C3CF314F5DB660022A8CD /* CountBean-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +563,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CA8106F314D7911000677B87 /* en */,
+				CA1C3CF114F5DB450022A8CD /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -592,6 +596,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CACF182314F4EED200AC048F /* en */,
+				CA1C3CFD14F6096B0022A8CD /* zh-Hans */,
 			);
 			name = "Default@2x.png";
 			sourceTree = "<group>";
@@ -600,6 +605,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CACF182614F4EEDA00AC048F /* en */,
+				CA1C3CFC14F609650022A8CD /* zh-Hans */,
 			);
 			name = Default.png;
 			sourceTree = "<group>";
