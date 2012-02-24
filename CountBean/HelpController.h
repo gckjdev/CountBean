@@ -14,5 +14,6 @@
 }
 @property (retain, nonatomic) IBOutlet UITextView *helpText;
 
+@property (retain, nonatomic) IBOutlet UILabel *helpTitle;
 - (IBAction)clickBack:(id)sender;
 @end

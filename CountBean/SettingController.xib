@@ -114,7 +114,11 @@
 							<bytes key="NSRGB">MC42NTg4MjM1Mjk0IDAuNTAxOTYwNzg0MyAwLjM0NTA5ODAzOTIAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
-						<string key="IBUIShadowOffset">{0, 0}</string>
+						<object class="NSColor" key="IBUIShadowColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC41NDUwOTgwMzkyIDAuMjk4MDM5MjE1NyAwLjAwNzg0MzEzNzI1NQA</bytes>
+						</object>
+						<string key="IBUIShadowOffset">{0, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -286,7 +290,6 @@
 						<string key="NSFrame">{{260, 430}, {55, 49}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
